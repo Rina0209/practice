@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewsport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>自己紹介サイト</title>
+        <style type="text/css">
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            padding: 0%;
+            margin: 0%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #4CA1BC;
+            width: 100%;
+            height: 3000px;
+            position: relative;
+
+        }
+        div#headder{
+            background-image: url("img/sunflower329293260720.jpg");
+            height: 600px;
+            max-width: 100%;
+            position: relative;
+        }
+        div#headder2{
+            background-image: url("img/wellcomelogo.png");
+            height: 370px;
+            width: 480px;
+            position: absolute;
+            top: 85px;
+            right: 0%;
+            zoom: 129%;
+            opacity: 0;
+        }
+        div.menu{
+            background-color: #333F50;
+            width: auto;
+            height: 160px;
+            position: relative;
+            padding: 30px;
+        }
+
+        div#menu1{
+            background-color: #f7f7f7;
+            cursor: pointer;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 150px;
+            overflow: hidden;
+            display: block;
+
+        }
+        div#menu1:hover{
+            transition-duration: 0.4s;
+            transform: scale(1.2);
+        }
+
+        div#menu2{
+            background-color: #f7f7f7;
+            position: absolute;
+            cursor: pointer;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 150px;
+            right: 45%;
+            overflow: hidden;
+            display: block;
+
+        }
+        div#menu2:hover{
+            transition-duration: 0.4s;
+            transform: scale(1.2);
+        }
+
+        div#menu3{
+            background-color: #f7f7f7;
+            position: absolute;
+            cursor: pointer;
+            width: 150px;
+            height: 150px;
+            right: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 150px;
+            overflow: hidden;
+            display: block;
+
+        }
+        div#menu3:hover{
+            transition-duration: 0.4s;
+            transform: scale(1.2);
+        }
+
+        div#menuA{
+            background-color: #4CA1BC;
+            color: azure;
+            width: 100%;
+            height: 500px;
+            border: solid azure;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            opacity: 0;
+        }
+        div#sitcat{
+            background-image: url(img/siruetto_toukaneko2.png);
+            width: 700px;
+            height: 600px;
+            zoom: .4;
+            right: 0;
+            bottom: 0%;
+            position: absolute;
+            opacity: 0.7;
+        }
+
+        div#menuB{
+            background-color:  #4CA1BC;
+            color: azure;
+            width: 100%;
+            height: 500px;
+            border: solid azure;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            opacity: 0;
+        }
+
+        div#sleepcat{
+            background-image: url(img/siruetto_cat_sleep.png);
+            width: 430px;
+            height: 300px;
+            zoom: .7;
+            position: absolute;
+            left: 0;
+            bottom: 0%;
+            opacity: 0.8;
+        }
+        div#menuC{
+            background-color: #4CA1BC;
+            color: azure;
+            width: 100%;
+            height: 500px;
+            border: solid azure;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            opacity: 0;
+        }
+        div#sitcat2{
+            background-image: url(img/siruettovcat_sit2.png);
+            width: 635px;
+            height: 943px;
+            zoom: .3;
+            position: absolute;
+            right: 20px;
+            bottom: 0%;
+            opacity: .8;
+        }
+        div.null{
+            background-color: #4CA1BC;
+            width: 100%;
+            height: 200px;
+        }
+        div.endpart{
+            width: 100%;
+            height: 280px;
+            /* background-color: azure; */
+            position: relative;
+        }
+        div#cat{
+            background-image: url("img/thankscat.png");
+            /* background-color: blueviolet; */
+            width: 480px;
+            height: 330px;
+            position: absolute;
+            left: 20px;
+            bottom: 284px;
+            zoom: 70%;
+        }
+        div#thanks{
+            background-image: url("img/logo.png");
+            width: 480px;
+            height: 327px;
+            position: absolute;
+            right: 30px;
+            bottom: 333px;
+            zoom: 60%;
+        }
+        div.footer{
+            background-color: #333F50;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            bottom: 0%;
+        }
+        div.button{
+            width: 200px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: azure;
+            right: 30px;
+            bottom: 20px;
+            position: absolute;
+            text-align: center;
+            line-height: 60px;
+            cursor: pointer;
+        }
+
+        #headder2.headder2-open{
+            opacity: 100%;
+            transition-duration: 1s;
+        }
+        #headder2.headder2-close{
+            opacity: 0;
+            transition-duration: .7s;
+        }
+
+        #menuA.menuA-open{
+            opacity: 100%;
+            transition-duration: 1s;
+        }
+        #menuA.menuA-close{
+            opacity: 0;
+            transition-duration: .7s;
+        }
+
+        #menuB.menuB-open{
+            opacity: 100%;
+            transition-duration: 1s;
+        }
+        #menuB.menuB-close{
+            opacity: 0;
+            transition-duration: .7s;
+        }
+
+        #menuC.menuC-open{
+            opacity: 100%;
+            transition-duration: 1s;
+        }
+        #menuC.menuC-close{
+            opacity: 0;
+            transition-duration: .7s;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="headder"> </div>
+        <div id="headder2"></div>
+        <div class="menu">
+            <div id="menu1"><nav><a href="#menuA">私について</a></nav></div>
+            <div id="menu2"><nav><a href="#menuB">趣味について</a></nav></div>
+            <div id="menu3"><nav><a href="#menuC">将来像</a></nav></div>
+        </div>
+       
+        <div id="menuA">
+            <p><font size="6">　私について</font></p>
+            <p>　</p>
+            <p><font size="5">　名前：古越　里菜</font></p>
+            <p><font size="5">　出身：東京</font></p>
+            <p><font size="5">　特技：楽器を演奏すること</font></p>
+            <p><font size="5">　→ピアノ，フルート，ヴァイオリン、など…</font></p>
+            <p><font size="5">　好きな曲のジャンル：ボーカロイド,J-POP,など</font></p>
+            <p><font size="5">　最近のイチオシ〇〇：Ado,Ayase,にじさんじ</font></p>
+            <div id="sitcat"></div>
+        </div>
+        <div id="menuB">
+            <p><font size="6">　趣味について</font></p>
+            <p>　</p>
+            <p><font size="5">　ゲーム：モンハン，スプラトゥーン，apex，など…
+            </font></p>
+            <p><font size="5">　→基本的に誰かと一緒に遊べるゲームを中心に楽しんでいます。</font></p>
+            <p><font size="5">　最近は、配信者を閲覧することも多いです。</font></p>
+            <p><font size="5">　ディズニー:大学生の頃は、２パーク共通の年間パスポートを所持していたことがあり、一番多い時はハロウィンのイベント期間中に10回前後足を運んでいました。</font></p>
+            <div id="sleepcat"></div>
+        </div>
+        <div id="menuC">
+            <p><font size="6">　将来像</font></p>
+            <p><font size="5">　 </font></p>
+            <p><font size="5">　やることはしっかりやり、楽しく仕事に向き合っていきたいと考えています。</font></p>
+            <p><font size="5">　過去より着実に、一歩前に踏み出すことをモットーとして技術をコツコツと積みあげていきたいと考えています。</font></p>
+            <p><font size="5">　人とのつながりを大切にして、頑張っていきたいです。</font></p>
+            <div id="sitcat2"> </div>
+        </div>
+
+        <div class="null"></div>
+        <div class="endpart"></div>
+        <div id="cat"></div><div id="thanks"></div>
+        <div class="footer">
+            <div class="button"><a href="#headder">トップへ戻る</a></div>
+        </div>
+        <script>
+             const headder = document.getElementById('headder');
+             headder.addEventListener('mouseover', () => {
+                    headder2.className = 'headder2-open';
+            });
+            // headder.addEventListener('mouseleave', () => {
+            //         headder2.className = 'headder2-close';
+            // });
+            const headder2 = document.getElementById('headder2');
+             headder2.addEventListener('mouseover', () => {
+                    headder2.className = 'headder2-open';
+            });
+            // headder2.addEventListener('mouseleave', () => {
+            //         headder2.className = 'headder2-close';
+            // });
+
+
+             const menuA = document.getElementById('menuA');
+             menuA.addEventListener('mouseover', () => {
+                    menuA.className = 'menuA-open';
+                });
+                menuA.addEventListener('mouseleave', () => {
+                    menuA.className = 'menuA-close';
+                });
+
+
+            const menuB = document.getElementById('menuB');
+            menuB.addEventListener('mouseover', () => {
+                 menuB.className = 'menuB-open';
+                });
+                menuB.addEventListener('mouseleave', () => {
+                    menuB.className = 'menuB-close';
+                });
+
+
+                const menuC = document.getElementById('menuC');
+                menuC.addEventListener('mouseover', () => {
+                     menuC.className = 'menuC-open';
+                });
+                menuC.addEventListener('mouseleave', () => {
+                    menuC.className = 'menuC-close';
+                });
+        </script>
+    </body>
+
+</html>
